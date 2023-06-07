@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+@layer base {
+  /*  Default settings */
+  * {
+    @apply m-0 p-0 border-0 box-border  outline-0 no-underline list-none;
+  }
+  html {
+    @apply scroll-smooth;
+  }
+  body {
+    @apply font-popins bg-bg bg-[url(../src/assets/bg-texture.png)] text-white leading-7;
+  }
+  section {
+    @apply mx-0 my-8;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    @apply font-medium;
+  }
+  h5 {
+    @apply text-light text-center;
+  }
+
+  h2 {
+    @apply text-primary text-center;
+  }
+  h1 {
+    @apply text-3xl md:text-5xl;
+  }
+  a {
+    @apply text-primary hover:text-white;
+  }
+  ::-webkit-scrollbar {
+    @apply hidden;
+  }
+  /*  */
+  /* Article from About component */
+  /*  */
+  article {
+    @apply w-full h-full  bg-bg-variant p-[5%] rounded-lg text-center flex flex-row gap-1 justify-between items-start md:aspect-auto  md:justify-start lg:justify-between duration-200 hover:bg-primary-variant hover:cursor-default lg:aspect-square md:flex-col md:items-center;
+  }
+}
+@layer components {
+  .text-light {
+    @apply text-light-gray;
+  }
+  .btn {
+    @apply w-max duration-200 inline-block text-xs  px-2 py-1 cursor-pointer  border-2 rounded-md border-primary bg-primary text-bg hover:border-transparent hover:bg-white hover:text-bg  sm:px-3 md:text-base;
+  }
+  .container {
+    @apply my-[3.5rem] mx-auto w-[90%];
+  }
+  .contact {
+    @apply w-full bg-bg-variant p-8 rounded-lg text-center flex flex-col items-center gap-2 duration-200 hover:bg-bg-variant;
+  }
+  .nav_icons {
+    @apply text-light-gray h-12 w-12 duration-200 flex items-center justify-center rounded-full p-3 text-center hover:bg-primary;
+  }
+}
+@layer utilities {
+  .vertical {
+    writing-mode: vertical-rl;
+  }
+}
