@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Aldrich&display=swap");
 
 @layer base {
   /*  Default settings */
@@ -12,7 +14,7 @@
     @apply scroll-smooth;
   }
   body {
-    @apply font-popins bg-bg bg-[url(../src/assets/bg-texture.png)] text-white leading-7;
+    @apply font-popins bg-gradient-to-l from-[#8e44ad] to-[#c0392b]  text-white leading-7;
   }
   section {
     @apply mx-0 my-8;
@@ -52,7 +54,7 @@
     @apply text-light-gray;
   }
   .btn {
-    @apply w-max duration-200 inline-block text-xs  px-2 py-1 cursor-pointer  border-2 rounded-md border-primary bg-primary text-bg hover:border-transparent hover:bg-white hover:text-bg  sm:px-3 md:text-base;
+    @apply w-max duration-200 inline-block text-xs  px-2 py-1 cursor-pointer  border-2 rounded-md border-gray-500  bg-white text-black hover:border-transparent hover:bg-white hover:text-bg  sm:px-3 md:text-base;
   }
   .container {
     @apply my-[3.5rem] mx-auto w-[90%];
@@ -68,4 +70,34 @@
   .vertical {
     writing-mode: vertical-rl;
   }
+}
+.hamburger {
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  transition: all 0.25s;
+  position: relative;
+}
+
+.hamburger-top,
+.hamburger-middle,
+.hamburger-bottom {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 3px;
+  top: 0;
+  left: 0;
+  background: white;
+  transform: rotate(0);
+  transition: all 0.5s;
+}
+
+.hamburger-middle {
+  transform: translateY(7px);
+}
+
+.hamburger-bottom {
+  transform: translateY(14px);
+  background: white;
 }

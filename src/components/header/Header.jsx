@@ -1,18 +1,45 @@
 import ME from "../../assets/me1.png";
+import { TypeAnimation } from "react-type-animation";
 
 function Header() {
   return (
     <header id="home">
-      <div className="container items-center gap-4 relative flex flex-col xl:gap-6  ">
-        <h5>Hello I'm</h5>
-        <h1 className="font-popins animate-slideInFromTop">David Kerkez</h1>
-        <h5 className="text-light">DJ / Music Producer</h5>
-        <a href="#contact" className="btn">
-          Book Now
-        </a>
-        <div className="bg-gradient-to-b from-primary to-transparent w-[50%] h-[18rem] rounded-t-full mt-4 animate-slideInFromBottom sm:w-[40%]  md:w-[30%] md:h-[22rem] lg:w-[25%] xl:w-[20%] xl:h-[26rem] ">
-          <img src={ME} alt="me" className=" h-full object-cover  " />
+      <div className="container mt-10 items-center   relative flex flex-col xl:gap-6  ">
+        <h1 className="font-headers text-3xl leading-3  uppercase animate-slideInFromTop">
+          David Kerkez
+        </h1>
+        <div className=" flex flex-row ml-[10%] justify-start drop-shadow-xl   ">
+          <span className="font-text uppercase font-medium mr-2 ">I Am a</span>
+          <TypeAnimation
+            sequence={[
+              " Clubs DJ",
+              2000,
+              " Weddings DJ",
+              2000,
+              " Music Producer",
+              2000,
+            ]}
+            wrapper="span"
+            speed={50}
+            className=" uppercase inline-block font-text font-semibold text-gray-800  w-[8rem]"
+            repeat={Infinity}
+          />
         </div>
+        <div className="bg-white w-screen absolute top-[12rem] h-[1rem]" />
+        <div className="bg-gradient-to-r relative group from-[#8e44ad] to-[#c0392b] overflow-hidden z-20 border-solid border-2 border-white  w-[50%] h-[18rem] rounded-[2rem] mt-4 animate-slideInFromBottom sm:w-[40%]  md:w-[30%] md:h-[22rem] lg:w-[25%] xl:w-[20%] xl:h-[26rem] ">
+          <a
+            href="#contact"
+            className="absolute bottom-1 left-0 right-0 mx-auto bg-black/30 z-20 backdrop-blur-xl text-white uppercase font-text  text-center border-solid group-hover:border-white/30 border-transparent border-y-[1px] "
+          >
+            Book Now
+          </a>
+          <img
+            src={ME}
+            alt="me"
+            className=" h-full object-cover group-hover:scale-110 duration-200  "
+          />
+        </div>
+
         <a
           href="#contact"
           className="absolute cursor-pointer vertical right-1 bottom-2 hidden md:block "

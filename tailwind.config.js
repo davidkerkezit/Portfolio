@@ -5,6 +5,8 @@ module.exports = {
     extend: {
       fontFamily: {
         popins: ["Poppins", "sans-serif"],
+        headers: ["Aldrich", "sans-serif"],
+        text: ["Rajdhani", "sans-serif"],
       },
       colors: {
         bg: "#1f1f38",
@@ -12,6 +14,8 @@ module.exports = {
         primary: "#4db5ff",
         "primary-variant": "rgba(77, 181, 255, 0.4)",
         "light-gray": "rgba(255, 255, 255, 0.6)",
+        "light-primary": "#145862",
+        btn: "#8e44ad",
       },
       keyframes: {
         slideInFromBottom: {

@@ -7,10 +7,12 @@ import Packs from "./components/packs/Packs";
 import Reviews from "./components/reviews/Reviews";
 import Header from "./components/header/Header";
 import Nav from "./components/nav/Nav";
+import Menu from "./components/Menu";
 
 function App() {
   return (
     <>
+      <Menu />
       <Header />
       <Nav />
       <About />
