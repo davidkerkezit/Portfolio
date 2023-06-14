@@ -14,7 +14,7 @@
     @apply scroll-smooth;
   }
   body {
-    @apply font-popins bg-gradient-to-l from-[#8e44ad] to-[#c0392b]  text-white leading-7;
+    @apply font-text gradient  text-white leading-7;
   }
   section {
     @apply mx-0 my-8;
@@ -27,11 +27,11 @@
     @apply font-medium;
   }
   h5 {
-    @apply text-light text-center;
+    @apply text-[#951033] text-center bg-white/60;
   }
 
   h2 {
-    @apply text-primary text-center;
+    @apply text-[#2E0B35] text-center font-headers bg-white/80 mt-1;
   }
   h1 {
     @apply text-3xl md:text-5xl;
@@ -46,7 +46,7 @@
   /* Article from About component */
   /*  */
   article {
-    @apply w-full h-full  bg-bg-variant p-[5%] rounded-lg text-center flex flex-row gap-1 justify-between items-start md:aspect-auto  md:justify-start lg:justify-between duration-200 hover:bg-primary-variant hover:cursor-default lg:aspect-square md:flex-col md:items-center;
+    @apply w-full h-full  bg-[#2E0B35] p-[5%] border-solid border-[1px] border-[#951033] rounded-lg text-center flex flex-row gap-1 justify-between items-center md:aspect-auto  md:justify-start lg:justify-between duration-200 hover:bg-primary-variant hover:cursor-default lg:aspect-square md:flex-col md:items-center;
   }
 }
 @layer components {
@@ -69,6 +69,9 @@
 @layer utilities {
   .vertical {
     writing-mode: vertical-rl;
+  }
+  .gradient {
+    background: linear-gradient(90deg, #240b36 0%, #c31432 50%, #240b36 100%);
   }
 }
 .hamburger {

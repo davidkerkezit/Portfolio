@@ -3,7 +3,15 @@ import ME from "../../assets/about-me.jpg";
 import { FaAward } from "react-icons/fa";
 import { SiDiscogs } from "react-icons/si";
 import { FiMusic } from "react-icons/fi";
+import { motion } from "framer-motion";
+import { fadeIn } from "../../variants";
+import CountUp from "react-countup";
+import { useInView } from "react-intersection-observer";
+
 function About() {
+  const [ref, inView] = useInView({
+    treshold: 0.5,
+  });
   return (
     <section id="about">
       <h5>Get To Know</h5>
@@ -19,21 +27,73 @@ function About() {
         </div>
         <div className="flex flex-col gap-4 justify-between col-span-5 items-center md:w-[90%] md:mx-auto md:gap-7 md:col-span-3 ">
           <div className="flex flex-col w-full gap-1 md:flex-row ">
-            <article>
-              <FaAward className="text-primary" />
+            <motion.article
+              variants={fadeIn("right", 0.1)}
+              initial="hidden"
+              whileInView={"show"}
+              viewport={{ once: false, amount: 0.3 }}
+            >
+              <FaAward className="text-white" />
               <h4>Experience</h4>
-              <small className="text-light">11+ Years Working</small>
-            </article>
-            <article>
-              <SiDiscogs className="text-primary" />
+              <small className="text-light">
+                {" "}
+                {inView ? (
+                  <CountUp
+                    start={0}
+                    end={11}
+                    duration={3}
+                    delay={0.6}
+                    className="text-2xl font-bold"
+                  />
+                ) : null}
+                + Years Working
+              </small>
+            </motion.article>
+            <motion.article
+              variants={fadeIn("right", 0.2)}
+              initial="hidden"
+              whileInView={"show"}
+              viewport={{ once: false, amount: 0.3 }}
+            >
+              <SiDiscogs className="text-white" />
               <h4>Clubs</h4>
-              <small className="text-light">300+ Worldwide</small>
-            </article>
-            <article>
-              <FiMusic className="text-primary" />
+              <small className="text-light">
+                {" "}
+                {inView ? (
+                  <CountUp
+                    start={0}
+                    end={300}
+                    duration={3}
+                    delay={0.6}
+                    className="text-2xl font-bold"
+                  />
+                ) : null}
+                + Worldwide
+              </small>
+            </motion.article>
+            <motion.article
+              ref={ref}
+              variants={fadeIn("right", 0.3)}
+              initial="hidden"
+              whileInView={"show"}
+              viewport={{ once: false, amount: 0.3 }}
+            >
+              <FiMusic className="text-white" />
               <h4>Big Events</h4>
-              <small className="text-light">10+ Festivals </small>
-            </article>
+              <small className="text-light">
+                {" "}
+                {inView ? (
+                  <CountUp
+                    start={0}
+                    end={11}
+                    duration={3}
+                    delay={0.6}
+                    className="text-2xl font-bold"
+                  />
+                ) : null}{" "}
+                + Festivals{" "}
+              </small>
+            </motion.article>
           </div>
           <p className="text-base font-light text-justify">
             Hi, my name is David Kerkez. I come from Novi Sad, Serbia. I am 28

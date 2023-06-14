@@ -21,15 +21,15 @@ function Header() {
             ]}
             wrapper="span"
             speed={50}
-            className=" uppercase inline-block font-text font-semibold text-gray-800  w-[8rem]"
+            className=" uppercase inline-block font-text font-semibold text-[#240b36]  w-[8rem]"
             repeat={Infinity}
           />
         </div>
-        <div className="bg-white w-screen absolute top-[12rem] h-[1rem]" />
-        <div className="bg-gradient-to-r relative group from-[#8e44ad] to-[#c0392b] overflow-hidden z-20 border-solid border-2 border-white  w-[50%] h-[18rem] rounded-[2rem] mt-4 animate-slideInFromBottom sm:w-[40%]  md:w-[30%] md:h-[22rem] lg:w-[25%] xl:w-[20%] xl:h-[26rem] ">
+        <div className="bg-white/70 w-screen absolute top-[12rem] h-[1rem]" />
+        <div className="bg-[#940F33] relative group  overflow-hidden z-20 border-solid border-2 border-white  w-[50%] h-[18rem] rounded-[2rem] mt-4 animate-slideInFromBottom sm:w-[40%]  md:w-[30%] md:h-[22rem] lg:w-[25%] xl:w-[20%] xl:h-[26rem] ">
           <a
             href="#contact"
-            className="absolute bottom-1 left-0 right-0 mx-auto bg-black/30 z-20 backdrop-blur-xl text-white uppercase font-text  text-center border-solid group-hover:border-white/30 border-transparent border-y-[1px] "
+            className="absolute bottom-1 left-0 right-0 mx-auto bg-white/10 z-20 backdrop-blur-md text-white uppercase font-text  text-center border-solid group-hover:border-white/ border-transparent border-y-[1px] "
           >
             Book Now
           </a>
