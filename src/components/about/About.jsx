@@ -109,14 +109,14 @@ function About() {
               </div>
             </motion.article>
           </div>
-          <p className="text-base font-light text-justify">
+          <p className="text-base font-text text-justify px-2">
             Hi, my name is David Kerkez. I come from Novi Sad, Serbia. I am 28
             years old. I work as a DJ since 2010. I worked in clubs from Serbia,
             Turkey and Greece.I also work at festivals and wedding parties. I
             shared the stage with many famous singers and DJs.
           </p>
           <a
-            className="btn "
+            className="btn uppercase "
             href="https://www.facebook.com/djdavidkerkez/"
             target="_blank"
             rel="noreferrer"

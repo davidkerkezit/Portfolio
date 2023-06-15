@@ -76,7 +76,9 @@ function ResidentDJ() {
               className="grayscale-0 rounded-t-xl border-b-2 border-solid border-[#951033] sm:duration-200 sm:grayscale-[90%] sm:group-hover:grayscale-[0%]"
             />
             <div className="flex flex-col justify-center items-center gap-2">
-              <h3>{club.name}</h3>
+              <h3 className="mt-[-3rem] z-20 bg-black/60 w-full text-center backdrop-blur-md">
+                {club.name}
+              </h3>
               <small>{club.city}</small>
               <img
                 src={club.flag}

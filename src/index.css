@@ -54,7 +54,7 @@
     @apply text-light-gray;
   }
   .btn {
-    @apply w-max duration-200 inline-block text-xs  px-2 py-1 cursor-pointer  border-2 rounded-md border-gray-500  bg-white text-black hover:border-transparent hover:bg-white hover:text-bg  sm:px-3 md:text-base;
+    @apply w-max duration-200 inline-block text-xs  px-2 py-1 cursor-pointer uppercase  border-2 rounded-md border-gray-500  bg-white text-black hover:border-transparent hover:bg-white hover:text-bg  sm:px-3 md:text-base;
   }
   .container {
     @apply my-[3.5rem] mx-auto w-[90%];
