@@ -3,6 +3,8 @@ import { FiMail } from "react-icons/fi";
 import { RiMessengerLine } from "react-icons/ri";
 import { FaWhatsapp } from "react-icons/fa";
 import emailjs from "@emailjs/browser";
+import { motion } from "framer-motion";
+import { fadeIn } from "../../variants";
 
 function Contact() {
   const sendEmail = (e) => {
@@ -31,7 +33,13 @@ function Contact() {
       <h2>Contact Me</h2>
       <div className="container flex flex-col gap-8 lg:flex-row">
         <div className="flex flex-col gap-4 justify-center items-center md:flex-row lg:flex-col">
-          <div className="contact  ">
+          <motion.div
+            className="contact  "
+            variants={fadeIn("right", 0.1)}
+            initial="hidden"
+            whileInView={"show"}
+            viewport={{ once: false, amount: 0.3 }}
+          >
             <FiMail /> <h3>Email</h3>
             <small>davidkerkez@gmail.com</small>
             <a
@@ -42,8 +50,15 @@ function Contact() {
             >
               Send a message
             </a>
-          </div>
-          <div className="contact">
+          </motion.div>
+
+          <motion.div
+            className="contact  "
+            variants={fadeIn("right", 0.1)}
+            initial="hidden"
+            whileInView={"show"}
+            viewport={{ once: false, amount: 0.3 }}
+          >
             <RiMessengerLine /> <h3>Messenger</h3>
             <small>David Kerkez</small>
             <a
@@ -54,8 +69,15 @@ function Contact() {
             >
               Send a message
             </a>
-          </div>
-          <div className="contact">
+          </motion.div>
+
+          <motion.div
+            className="contact  "
+            variants={fadeIn("right", 0.1)}
+            initial="hidden"
+            whileInView={"show"}
+            viewport={{ once: false, amount: 0.3 }}
+          >
             <FaWhatsapp /> <h3>WhatsApp</h3>
             <small>+381649074184</small>
             <a
@@ -66,7 +88,7 @@ function Contact() {
             >
               Send a message
             </a>
-          </div>
+          </motion.div>
         </div>
         <form
           onSubmit={sendEmail}
@@ -77,14 +99,14 @@ function Contact() {
             placeholder="Your Full Name"
             required
             name="name"
-            className="p-4 bg-transparent border-solid border-2 border-primary rounded-lg text-white"
+            className="p-4 bg-[#2e0b3590] border-[#951033]  border-solid border-2 rounded-lg text-white"
           />
           <input
             type="text"
             placeholder="Your Email"
             required
             name="email"
-            className="p-4 bg-transparent border-solid border-2 border-primary rounded-lg text-white"
+            className="p-4 bg-[#2e0b3590] border-[#951033]  border-solid border-2 rounded-lg text-white"
           />
           <textarea
             name="message"
@@ -93,7 +115,7 @@ function Contact() {
             rows="10"
             placeholder="Your Message"
             required
-            className="p-4 bg-transparent border-solid border-2 border-primary rounded-lg resize-none text-white"
+            className="p-4 bg-[#2e0b3590] border-[#951033]  border-solid border-2 rounded-lg resize-none text-white"
           ></textarea>
           <input className="btn " type="submit" value="Send Message" />
         </form>

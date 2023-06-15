@@ -74,8 +74,8 @@ function About() {
                     <CountUp
                       start={0}
                       end={300}
-                      duration={3}
-                      delay={0.6}
+                      duration={2}
+                      delay={0.5}
                       className="text-2xl font-bold"
                     />
                   ) : null}

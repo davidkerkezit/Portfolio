@@ -50,11 +50,11 @@ function Services() {
     <div id="packs">
       <h5>Gift For DJs</h5>
       <h2>DJ David Kerkez Free Pack</h2>
-      <div className="container flex flex-col gap-4 bg-bg-variant p-4 rounded-xl ">
+      <div className="container flex flex-col gap-4 bg-[#2E0B35] border-[#951033]  border-solid border-[1px]  p-4 rounded-xl ">
         {TRACKS.map((track) => (
           <div
             key={track.id}
-            className="grid grid-cols-1 gap-3 bg-black/30 py-2 px-4 justify-center rounded-xl items-center duration-200 hover:bg-black/20  lg:grid-cols-10 lg:gap-3"
+            className="flex flex-col gap-3 bg-black/30 py-2 px-4 justify-center items-center  border-white/20  border-solid border-[1px] rounded-xl duration-200 hover:bg-black/20 lg-grid  lg:grid-cols-10 lg:gap-3"
           >
             <div className="flex items-center gap-8 justify-center md:justify-start col-span-4 xl:col-span-5">
               <img
@@ -62,23 +62,23 @@ function Services() {
                 alt="banner"
                 className="w-[10%] rounded-sm hidden md:block"
               />
-              <h5>{track.name}</h5>
+              <h5 className="bg-transparent text-white">{track.name}</h5>
             </div>
 
             <ReactAudioPlayer
               src={track.src}
               controls
-              className="w-full h-[2rem] col-span-5 xl:col-span-4 "
+              className="w-full h-[2rem]  xl:col-span-4 "
               controlsList={"nodownload"}
             />
             <a
               href={track.src}
               download
               target="_blank"
-              className="w-max mx-auto px-3 text-base flex items-center gap-2 text-white border-2 border-solid border-primary text-center rounded-md hover:bg-white  hover:text-bg hover:border-transparent lg:py-1 col-span-1"
+              className="w-max px-3 text-base flex mx-auto  items-center gap-2 text-white border-[#951033]  border-solid border-[1px] text-center rounded-md   hover:text-bg hover:border-white lg:py-1 lg:col-span-1"
               rel="noreferrer"
             >
-              <span className="lg:hidden xl:block ">Download</span>{" "}
+              <span className="lg:hidden xl:block font-text ">Download</span>{" "}
               <AiOutlineDownload className="xl:hidden" />
             </a>
           </div>
