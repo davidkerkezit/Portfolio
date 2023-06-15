@@ -54,7 +54,7 @@
     @apply text-light-gray;
   }
   .btn {
-    @apply w-max duration-200 inline-block text-xs tracking-wide font-text px-2 py-1 cursor-pointer uppercase  border-2 rounded-md border-[#951033]  bg-white text-black font-semibold hover:border-transparent hover:bg-white hover:text-bg  sm:px-3 md:text-base;
+    @apply w-max duration-200 inline-block text-xs tracking-wide font-text px-2 py-1 cursor-pointer uppercase  border-[1px] rounded-md border-[#951033]  bg-white text-black font-semibold hover:border-transparent hover:bg-white hover:text-bg  sm:px-3 md:text-base;
   }
   .container {
     @apply my-[3.5rem] mx-auto w-[90%];
@@ -103,4 +103,7 @@
 .hamburger-bottom {
   transform: translateY(14px);
   background: white;
+}
+.swiper-pagination-bullet-active {
+  background-color: #951033 !important;
 }

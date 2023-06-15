@@ -32,7 +32,7 @@ module.exports = {
         },
         slideInFromTop: {
           "0%": {
-            transform: "translateY(-100%)",
+            transform: "translateY(-600%)",
           },
 
           "70%": {

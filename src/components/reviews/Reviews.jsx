@@ -50,12 +50,12 @@ function Reviews() {
             clickable: true,
           }}
           modules={[Pagination]}
-          className="w-full mx-auto h-[17rem] md:h-[14rem]   mySwiper "
+          className="w-full mx-auto h-[17rem] md:h-[14rem] border-2  border-solid border-[#951033]  rounded-3xl mySwiper "
         >
           {CLIENTS.map((client) => (
             <SwiperSlide
               key={client.id}
-              className="py-4 px-10 flex flex-col text-center gap-2  rounded-3xl bg-[#2E0B35] border-solid border-2 border-[#951033]items-center"
+              className="py-4 px-10 flex flex-col text-center gap-2  rounded-3xl bg-[#2E0B35] items-center"
             >
               <img
                 src={client.src}

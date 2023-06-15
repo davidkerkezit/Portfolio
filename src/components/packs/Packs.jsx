@@ -79,7 +79,7 @@ function Services() {
               rel="noreferrer"
             >
               <span className="lg:hidden xl:block font-text ">Download</span>{" "}
-              <AiOutlineDownload className="xl:hidden" />
+              <AiOutlineDownload className=" hidden xl:hidden" />
             </a>
           </div>
         ))}
