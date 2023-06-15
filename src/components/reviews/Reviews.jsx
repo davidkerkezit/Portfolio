@@ -60,7 +60,7 @@ function Reviews() {
               <img
                 src={client.src}
                 alt="avatar"
-                className="w-[18%] aspect-square rounded-full border-solid border-2 border-[#951033] mx-auto sm:w-[12%] md:w-[8%]"
+                className="w-12 aspect-square rounded-full border-solid border-2 border-[#951033] mx-auto sm:w-[12%] md:w-[8%]"
               />
               <h2 className="text-white bg-transparent">{client.name}</h2>
               <small className="text-center ">{client.text}</small>
