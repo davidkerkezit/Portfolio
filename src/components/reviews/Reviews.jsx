@@ -43,26 +43,26 @@ function Reviews() {
     <section id="reviews">
       <h5>What Clients Say</h5>
       <h2>Reviews</h2>
-      <div className="container md:w-[60%] lg:w-[50%] ">
+      <div className="container md:w-[60%] lg:w-[50%]  ">
         <Swiper
           spaceBetween={20}
           pagination={{
             clickable: true,
           }}
           modules={[Pagination]}
-          className="w-full mx-auto h-[17rem] md:h-[14rem]  mySwiper"
+          className="w-full mx-auto h-[17rem] md:h-[14rem]   mySwiper "
         >
           {CLIENTS.map((client) => (
             <SwiperSlide
               key={client.id}
-              className="py-4 px-10 flex flex-col text-center gap-2 rounded-3xl bg-bg-variant border-solid border-2 border-primary items-center"
+              className="py-4 px-10 flex flex-col text-center gap-2  rounded-3xl bg-[#2E0B35] border-solid border-2 border-[#951033]items-center"
             >
               <img
                 src={client.src}
                 alt="avatar"
-                className="w-[18%] aspect-square rounded-full border-solid border-2 border-primary mx-auto sm:w-[12%] md:w-[8%]"
+                className="w-[18%] aspect-square rounded-full border-solid border-2 border-[#951033] mx-auto sm:w-[12%] md:w-[8%]"
               />
-              <h2>{client.name}</h2>
+              <h2 className="text-white bg-transparent">{client.name}</h2>
               <small className="text-center ">{client.text}</small>
             </SwiperSlide>
           ))}

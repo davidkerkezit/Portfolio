@@ -9,14 +9,20 @@ import CountUp from "react-countup";
 import { useInView } from "react-intersection-observer";
 
 function About() {
-  const [ref, inView] = useInView({
+  const [Experience, ExperienceInView] = useInView({
+    treshold: 0.5,
+  });
+  const [Clubs, ClubsInView] = useInView({
+    treshold: 0.5,
+  });
+  const [Festivals, FestivalsInView] = useInView({
     treshold: 0.5,
   });
   return (
     <section id="about">
       <h5>Get To Know</h5>
       <h2>About Me</h2>
-      <div className="container grid text-start grid-cols-5 ">
+      <div className="container mt-10 mb-10 grid text-start grid-cols-5 ">
         <div className="col-span-2 bg-primary-variant rounded-full w-[80%] aspect-square relative border-4 border-solid border-primary hidden md:inline">
           <img
             src={ME}
@@ -28,6 +34,7 @@ function About() {
         <div className="flex flex-col gap-4 justify-between col-span-5 items-center md:w-[90%] md:mx-auto md:gap-7 md:col-span-3 ">
           <div className="flex flex-col w-full gap-1 md:flex-row ">
             <motion.article
+              ref={Experience}
               variants={fadeIn("right", 0.1)}
               initial="hidden"
               whileInView={"show"}
@@ -35,21 +42,24 @@ function About() {
             >
               <FaAward className="text-white" />
               <h4>Experience</h4>
-              <small className="text-light">
-                {" "}
-                {inView ? (
-                  <CountUp
-                    start={0}
-                    end={11}
-                    duration={3}
-                    delay={0.6}
-                    className="text-2xl font-bold"
-                  />
-                ) : null}
-                + Years Working
-              </small>
+              <div className="w-[7rem]  flex justify-between items-center">
+                <small className="text-white    ">
+                  {" "}
+                  {ExperienceInView ? (
+                    <CountUp
+                      start={0}
+                      end={11}
+                      duration={3}
+                      delay={0.6}
+                      className="text-2xl font-bold  "
+                    />
+                  ) : null}
+                </small>
+                <small> + Years Working</small>
+              </div>
             </motion.article>
             <motion.article
+              ref={Clubs}
               variants={fadeIn("right", 0.2)}
               initial="hidden"
               whileInView={"show"}
@@ -57,22 +67,24 @@ function About() {
             >
               <SiDiscogs className="text-white" />
               <h4>Clubs</h4>
-              <small className="text-light">
-                {" "}
-                {inView ? (
-                  <CountUp
-                    start={0}
-                    end={300}
-                    duration={3}
-                    delay={0.6}
-                    className="text-2xl font-bold"
-                  />
-                ) : null}
-                + Worldwide
-              </small>
+              <div className="w-[7rem]  flex justify-between items-center">
+                <small className="text-white   ">
+                  {" "}
+                  {ClubsInView ? (
+                    <CountUp
+                      start={0}
+                      end={300}
+                      duration={3}
+                      delay={0.6}
+                      className="text-2xl font-bold"
+                    />
+                  ) : null}
+                </small>
+                <small>+ Worldwide</small>
+              </div>
             </motion.article>
             <motion.article
-              ref={ref}
+              ref={Festivals}
               variants={fadeIn("right", 0.3)}
               initial="hidden"
               whileInView={"show"}
@@ -80,19 +92,21 @@ function About() {
             >
               <FiMusic className="text-white" />
               <h4>Big Events</h4>
-              <small className="text-light">
-                {" "}
-                {inView ? (
-                  <CountUp
-                    start={0}
-                    end={11}
-                    duration={3}
-                    delay={0.6}
-                    className="text-2xl font-bold"
-                  />
-                ) : null}{" "}
-                + Festivals{" "}
-              </small>
+              <div className="w-[5rem]  flex justify-between items-center">
+                <small className="text-white    ">
+                  {" "}
+                  {FestivalsInView ? (
+                    <CountUp
+                      start={0}
+                      end={11}
+                      duration={3}
+                      delay={0.6}
+                      className="text-2xl font-bold"
+                    />
+                  ) : null}
+                </small>
+                <small>+ Festivals</small>
+              </div>
             </motion.article>
           </div>
           <p className="text-base font-light text-justify">

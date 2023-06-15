@@ -68,12 +68,12 @@ function ResidentDJ() {
         {CLUBS.map((club) => (
           <div
             key={club.id}
-            className="bg-bg-variant border-2 border-solid border-primary rounded-xl flex w-full items-center flex-col gap-4 duration-200 group"
+            className="bg-[#2E0B35] border-2 border-solid border-[#951033] rounded-xl flex w-full items-center flex-col gap-4 duration-200 group"
           >
             <img
               src={club.image}
               alt="nightclub"
-              className="grayscale-0 rounded-t-xl border-b-2 border-solid border-primary sm:duration-200 sm:grayscale-[90%] sm:group-hover:grayscale-[0%]"
+              className="grayscale-0 rounded-t-xl border-b-2 border-solid border-[#951033] sm:duration-200 sm:grayscale-[90%] sm:group-hover:grayscale-[0%]"
             />
             <div className="flex flex-col justify-center items-center gap-2">
               <h3>{club.name}</h3>

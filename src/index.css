@@ -60,7 +60,7 @@
     @apply my-[3.5rem] mx-auto w-[90%];
   }
   .contact {
-    @apply w-full bg-bg-variant p-8 rounded-lg text-center flex flex-col items-center gap-2 duration-200 hover:bg-bg-variant;
+    @apply w-full bg-[#2E0B35] border-[#951033] border-solid border-[1px] p-8 rounded-lg text-center flex flex-col items-center gap-2 duration-200 hover:bg-bg-variant;
   }
   .nav_icons {
     @apply text-light-gray h-12 w-12 duration-200 flex items-center justify-center rounded-full p-3 text-center hover:bg-primary;

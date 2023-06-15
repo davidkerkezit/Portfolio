@@ -6,7 +6,7 @@ function Exprerience() {
     <section id="experience">
       <h5>Something Completely Different</h5>
       <h2>Weeding DJ</h2>
-      <div className=" w-[80%] sm:max-w-[400px] xl:max-w-[50%] md:max-w-[600px]  my-5 mx-auto flex relative justify-between bg-bg-variant border-lg border-2 rounded-3xl border-solid border-primary md:w-[60%]">
+      <div className=" w-[80%] sm:max-w-[400px] xl:max-w-[50%] md:max-w-[600px]  my-5 mx-auto flex relative justify-between bg-[#2E0B35] border-lg border-2 rounded-3xl border-solid border-[#951033] md:w-[60%]">
         <div className="flex flex-col text-center p-8 gap-4 w-full z-10 shadow-xl bg-black/50 rounded-3xl">
           <h3>Let Your Wedding Be Different</h3>
           <p className="text-sm sm:text-md md:text-base ">

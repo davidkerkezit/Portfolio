@@ -31,7 +31,7 @@ function Contact() {
       <h2>Contact Me</h2>
       <div className="container flex flex-col gap-8 lg:flex-row">
         <div className="flex flex-col gap-4 justify-center items-center md:flex-row lg:flex-col">
-          <div className="contact ">
+          <div className="contact  ">
             <FiMail /> <h3>Email</h3>
             <small>davidkerkez@gmail.com</small>
             <a
